@@ -18,9 +18,9 @@ export default NumberCache;
 
 // Test
 const cache = new NumberCache();
-cache.set("a", 1, 5); // gives 1
+cache.set("a", 1, 5); // sets 1 for 5 sec
 setTimeout(() => {
-  console.log(cache.get("a")); // null (after 5s)
+  console.log(cache.get("a")); // To test after 5s : null
 }, 6000);
-console.log(cache.get("a"));
+console.log(cache.get("a")); // 1
 cache.set("a", "string", 5); //throws error
