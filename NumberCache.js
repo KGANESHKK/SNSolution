@@ -1,12 +1,15 @@
 import BaseCache from "./BaseCache.js";
 
 class NumberCache extends BaseCache {
+
+// Hooks 
   beforeSet(key, value) {
     if (typeof value !== "number") {
       console.log("Only numbers allowed!"); // we can use throw new Error
     }
   }
 
+// Hooks
   afterGet(key, value) {
     console.log(`Key ${key} accessed with value: ${value}`);
   }
